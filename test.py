@@ -139,7 +139,7 @@ def get_args():
     parser.add_argument(
         "--test_data_path",
         type=str,
-        default='./second_stage_dataset/test',
+        default='',
         help="Path to the test dataset"
     )
     
@@ -147,7 +147,7 @@ def get_args():
         "--classes",
         type=str,
         nargs='+',
-        default=["1", "2", "3", "4", "5", "6"],
+        default=[],
         help="List of class names"
     )
     

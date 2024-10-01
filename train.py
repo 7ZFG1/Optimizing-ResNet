@@ -196,29 +196,22 @@ def get_args():
     parser.add_argument(
         "--train_data_path",
         type=str,
-        default='./second_stage_dataset/train',
+        default='',
         help="Path to the training dataset"
     )
     
     parser.add_argument(
         "--val_data_path",
         type=str,
-        default='./second_stage_dataset/val',
+        default='',
         help="Path to the validation dataset"
     )
-    
-    parser.add_argument(
-        "--test_data_path",
-        type=str,
-        default='./second_stage_dataset/test',
-        help="Path to the test dataset"
-    )
-    
+        
     parser.add_argument(
         "--classes",
         type=str,
         nargs='+',
-        default=["1", "2", "3", "4", "5", "6"],
+        default=[],
         help="List of class names"
     )
     
@@ -233,7 +226,7 @@ def get_args():
     parser.add_argument(
         "--model_save_path",
         type=str,
-        default='trained_model/V3_R50',
+        default='',
         help="Path to save the trained model"
     )
 
@@ -258,7 +251,6 @@ if __name__ == "__main__":
     print(f"Momentum: {args.momentum}")
     print(f"Train Data Path: {args.train_data_path}")
     print(f"Validation Data Path: {args.val_data_path}")
-    print(f"Test Data Path: {args.test_data_path}")
     print(f"Classes: {args.classes}")
     print(f"Frozen Layers: {args.frozen_layers}")
     print(f"Model Save Path: {args.model_save_path}")
