@@ -1,0 +1,15 @@
+# Base
+numpy
+opencv-python
+torch
+torchvision
+tqdm
+argparse
+os
+scikit-learn
+seaborn
+
+# Logging
+mlflow
+tensorboard
+
