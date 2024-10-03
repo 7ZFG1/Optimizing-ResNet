@@ -15,10 +15,10 @@ class OptimizedResNet101Classifier(nn.Module):
 
         # Additional convolutional layer for feature extraction
         self.additional_conv = nn.Sequential(
-            nn.Conv2d(2048, 1024, kernel_size=3, padding=1),
-            nn.BatchNorm2d(1024),
+            nn.Conv2d(512, 512, kernel_size=3, padding=1),
+            nn.BatchNorm2d(512),
             nn.ReLU(),
-            nn.Conv2d(1024, 512, kernel_size=3, padding=1),
+            nn.Conv2d(512, 512, kernel_size=3, padding=1),
             nn.BatchNorm2d(512),
             nn.ReLU(),
             nn.AdaptiveAvgPool2d((1, 1))
@@ -61,10 +61,10 @@ class OptimizedResNet50Classifier(nn.Module):
                     param.requires_grad = False
 
         self.additional_conv = nn.Sequential(
-            nn.Conv2d(2048, 1024, kernel_size=3, padding=1),
-            nn.BatchNorm2d(1024),
+            nn.Conv2d(512, 512, kernel_size=3, padding=1),
+            nn.BatchNorm2d(512),
             nn.ReLU(),
-            nn.Conv2d(1024, 512, kernel_size=3, padding=1),
+            nn.Conv2d(512, 512, kernel_size=3, padding=1),
             nn.BatchNorm2d(512),
             nn.ReLU(),
             nn.AdaptiveAvgPool2d((1, 1))
